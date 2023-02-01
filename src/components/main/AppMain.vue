@@ -1,8 +1,12 @@
 <script>
 import { store } from "../../store";
+import ListProjects from "../commons/ListProjects.vue";
 
 export default {
   name: "AppMain",
+  components: {
+    ListProjects,
+  },
   data() {
     return {
       store,
@@ -13,7 +17,7 @@ export default {
 
 <template>
   <main>
-    <h1>Hello World</h1>
+    <ListProjects />
   </main>
 </template>
 
