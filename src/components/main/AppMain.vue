@@ -21,4 +21,15 @@ export default {
   </main>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+main {
+  background-image: linear-gradient(
+    to right top,
+    #efefef,
+    #efedf3,
+    #f1ecf6,
+    #f3e9f8,
+    #f7e7f9
+  );
+}
+</style>

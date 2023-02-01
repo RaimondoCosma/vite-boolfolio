@@ -8,7 +8,20 @@ export default {
 </script>
 
 <template>
-  <footer>FOOTER</footer>
+  <footer>
+    <small> Made with ❤️ by Boolean </small>
+  </footer>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+footer {
+  display: flex;
+  align-items: center;
+  padding: 0 0.625rem;
+  height: 4.375rem;
+  background-color: rgb(42, 42, 42);
+  small {
+    color: white;
+  }
+}
+</style>

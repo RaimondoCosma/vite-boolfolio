@@ -1,0 +1,14 @@
+/* --------------------
+    CONTAINER
+-------------------- */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 75rem;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
