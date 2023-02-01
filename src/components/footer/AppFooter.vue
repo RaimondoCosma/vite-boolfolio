@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: "AppHeader",
+  name: "AppFooter",
   data() {
     return {};
   },
@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-  <header>LOGO</header>
+  <footer>FOOTER</footer>
 </template>
 
 <style lang="scss" scoped></style>
