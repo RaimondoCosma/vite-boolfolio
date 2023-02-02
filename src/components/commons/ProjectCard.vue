@@ -33,6 +33,7 @@ export default {
 .card {
   position: relative;
   width: 100%;
+  border-radius: 0.625rem 0.625rem 0 0;
   cursor: pointer;
   background-color: #f3f3f3;
   &:hover img {
