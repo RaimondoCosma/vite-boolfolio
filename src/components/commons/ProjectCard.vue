@@ -9,23 +9,27 @@ export default {
 
 <template>
   <div class="card">
-    <div class="img">
-      <img :src="projectInfo.image_url" :alt="projectInfo.title" />
-      <div class="filter"></div>
-      <div class="technology">
-        <span class="badge" v-for="technology in projectInfo.technologies">{{
-          technology.name
-        }}</span>
+    <router-link
+      :to="{ name: 'show-project', params: { slug: projectInfo.slug } }"
+    >
+      <div class="img">
+        <img :src="projectInfo.image_url" :alt="projectInfo.title" />
+        <div class="filter"></div>
+        <div class="technology">
+          <span class="badge" v-for="technology in projectInfo.technologies">{{
+            technology.name
+          }}</span>
+        </div>
       </div>
-    </div>
-    <div class="card-bottom">
-      <h3 class="card-title">{{ projectInfo.title }}</h3>
-      <p class="description">{{ projectInfo.description }}</p>
-      <div v-if="projectInfo.type" class="typology">
-        <h4>Tipologia:</h4>
-        <div>{{ projectInfo.type.name }}</div>
+      <div class="card-bottom">
+        <h3 class="card-title">{{ projectInfo.title }}</h3>
+        <p class="description">{{ projectInfo.description }}</p>
+        <div v-if="projectInfo.type" class="typology">
+          <h4>Tipologia:</h4>
+          <div>{{ projectInfo.type.name }}</div>
+        </div>
       </div>
-    </div>
+    </router-link>
   </div>
 </template>
 
@@ -33,6 +37,7 @@ export default {
 .card {
   position: relative;
   width: 100%;
+  height: 100%;
   border-radius: 0.625rem 0.625rem 0 0;
   cursor: pointer;
   background-color: #f3f3f3;
@@ -53,6 +58,12 @@ export default {
       &:hover {
         background-color: rgba(0, 255, 255, 0.723);
       }
+    }
+  }
+  .card-bottom {
+    padding: 0.625rem 0.9375rem;
+    & > * {
+      margin-bottom: 0.3125rem;
     }
   }
   .card-title {
