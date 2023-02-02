@@ -17,7 +17,7 @@ export default {
 
 <template>
   <main>
-    <ListProjects />
+    <router-view></router-view>
   </main>
 </template>
 
