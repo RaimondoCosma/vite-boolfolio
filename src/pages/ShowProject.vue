@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-  <section class="single-project">
+  <section class="single-project container">
     <div>
       <h2 class="project-title">Progetto: {{ project.title }}</h2>
       <div class="card">
@@ -43,12 +43,29 @@ export default {
       </div>
     </div>
   </section>
+  <section class="comments">
+    <h2>Commenti:</h2>
+    <div v-for="comment in project.comments" class="comment">
+      <div class="user-img">
+        <img
+          src="https://www.transparentpng.com/thumb/user/gray-user-profile-icon-png-fP8Q1P.png"
+          alt="user-img"
+        />
+      </div>
+      <div class="comment-details">
+        <h4 v-if="comment.name">{{ comment.name }}</h4>
+        <h4 v-else>Unknown</h4>
+        <p>{{ comment.content }}</p>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
 .single-project {
   padding: 3.125rem 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   & > div {
     display: flex;
@@ -120,6 +137,28 @@ export default {
   }
   .typology {
     text-align: center;
+  }
+}
+.comments {
+  max-width: 56.25rem;
+  margin: auto;
+  padding-bottom: 3.125rem;
+}
+.comment {
+  display: flex;
+  align-items: center;
+  margin-top: 1.25rem;
+  .user-img {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: center;
+    width: 3.75rem;
+    height: 3.75rem;
+    margin-right: 0.9375rem;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: white;
   }
 }
 </style>
